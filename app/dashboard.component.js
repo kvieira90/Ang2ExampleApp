@@ -1,4 +1,4 @@
-System.register(['angular2/core', './mock-heroes'], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,28 @@ System.register(['angular2/core', './mock-heroes'], function(exports_1, context_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, mock_heroes_1;
-    var HeroService;
+    var core_1;
+    var DashboardComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (mock_heroes_1_1) {
-                mock_heroes_1 = mock_heroes_1_1;
             }],
         execute: function() {
-            HeroService = (function () {
-                function HeroService() {
+            DashboardComponent = (function () {
+                function DashboardComponent() {
                 }
-                HeroService.prototype.getHeroes = function () {
-                    return Promise.resolve(mock_heroes_1.HEROES);
-                };
-                HeroService = __decorate([
-                    core_1.Injectable(), 
+                DashboardComponent = __decorate([
+                    core_1.Component({
+                        selector: 'my-dashboard',
+                        template: 'app/dashboard.component.html'
+                    }), 
                     __metadata('design:paramtypes', [])
-                ], HeroService);
-                return HeroService;
+                ], DashboardComponent);
+                return DashboardComponent;
             }());
-            exports_1("HeroService", HeroService);
+            exports_1("DashboardComponent", DashboardComponent);
         }
     }
 });
-//# sourceMappingURL=hero.service.js.map
+//# sourceMappingURL=dashboard.component.js.map
