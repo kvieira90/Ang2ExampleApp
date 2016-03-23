@@ -1,8 +1,9 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
 import {HeroesComponent} from './heroes.component';
 import {DashboardComponent} from './dashboard.component';
+import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
 
 @Component({
@@ -31,9 +32,14 @@ import {HeroService} from './hero.service';
     name: 'Dashboard',
     component: DashboardComponent,
     useAsDefault: true
+  },
+  {
+    path: '/detail:id',
+    name: 'HeroDetail',
+    component: HeroDetailComponent,
   }
 ])
 
-export class AppComponent implements OnInit{
+export class AppComponent{
   public title = 'Tour of Heroes';
 }
